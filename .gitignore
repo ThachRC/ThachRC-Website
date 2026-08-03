@@ -1,0 +1,11 @@
+# Modpack đóng gói (tải qua Google Drive trong trang web)
+modpacks/
+
+# File tạm
+cookies.txt
+ds_article.html
+*.log
+
+# Hệ thống
+Thumbs.db
+.DS_Store

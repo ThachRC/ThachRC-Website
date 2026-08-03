@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThachCraft - ThachRC</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bg.css">
+  <link rel="stylesheet" href="minecraft.css">
+</head>
+<body class="page-enter">
+  <div class="pixel-layer" id="pixelLayer"></div>
+
+  <div class="topbar">
+    <button class="back-button" id="backBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5"></path>
+        <path d="M12 19l-7-7 7-7"></path>
+      </svg>
+      <span>Trang chọn game</span>
+    </button>
+
+    <div class="social-buttons">
+      <a class="social-button" href="https://github.com/ThachRC" target="_blank" rel="noopener" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+        </svg>
+      </a>
+      <a class="social-button" href="https://www.facebook.com/HThach0315" target="_blank" rel="noopener" title="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+        </svg>
+      </a>
+      <a class="social-button" href="https://discord.gg/29yyZGGAaR" target="_blank" rel="noopener" title="Discord">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <main class="page">
+    <header class="game-hero">
+      <img src="minecraft_banner.jpg" alt="ThachCraft" class="game-banner">
+      <h1 class="game-title">ThachCraft</h1>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-num">46</span>
+        <span class="stat-label">Mods</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Gói tài nguyên</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1</span>
+        <span class="stat-label">Shader</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="modpack-info">
+        <span class="label">Tên modpack</span>
+        <h2 class="modpack-name">ThachCraft 1.0</h2>
+      </div>
+
+      <div class="owner-row">
+        <div class="owner">
+          <img src="thachraucau-head.png" alt="Skin ThachRauCau" class="skin-icon">
+          <div>
+            <span class="label">Chủ modpack</span>
+            <p class="owner-name">ThachRauCau</p>
+          </div>
+        </div>
+
+        <a class="download-button" href="https://drive.google.com/file/d/1p5xGIs9uwbCwZbGrMxmimxp1g6s0mUNb/view?usp=sharing" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <path d="M7 10l5 5 5-5"></path>
+            <path d="M12 15V3"></path>
+          </svg>
+          <span>Tải xuống modpack</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="panel update-panel">
+      <h2 class="panel-title">Thông tin cập nhật</h2>
+      <ul class="update-list">
+        <li><strong>v1.0</strong> - Phát hành lần đầu, tổng hợp các mod nền tảng cho Minecraft.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="bg.js"></script>
+  <script src="minecraft.js"></script>
+</body>
+</html>
